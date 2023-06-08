@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
-import 'SignUp.dart';
+import 'package:tugas_4/list_page.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SignUp(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+      ),
+	  debugShowCheckedModeBanner: false,
+      home: const ListPage(),
     );
   }
 }

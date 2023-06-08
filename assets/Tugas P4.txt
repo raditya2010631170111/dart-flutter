@@ -1,0 +1,6 @@
+Tugasnya 
+1.Bikin halaman home screen isinya minimal (foto, title) 
+2.Bikin halaman detail (minimal foto, deskripsi, rating) 
+3.Dua halaman harus terhubung pake navigator 
+4.Kreasikan sebagus mungkin jangan kaya gambar di sebelah 
+5.Datanya boleh bebas ga harus restaurant
