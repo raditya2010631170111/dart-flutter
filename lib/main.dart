@@ -30,9 +30,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var textSize = 12.0;
+  bool pressGeoON = false;
+  bool cmbscritta = false;
   double _counter = 12.0;
-  bool isVisible = false;
 
   void _incrementCounter() {
     setState(() {
@@ -50,18 +50,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(""),
+            const Text("disembunyikan"),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-			  child: Text('enlarge text'),
-				onPressed: () {
-					textSize = textSize + 1.0;
-					print(textSize);
-					setState(() {});
-				  },
-			),
+		    child: cmbscritta ? Text("Raditya Aji") : Text("Ajiradit"),
+          onPressed: () {
+            setState(() {
+              pressGeoON = !pressGeoON;
+              cmbscritta = !cmbscritta;	
+            });
+          }
+      ), 
     );
   }
 }
