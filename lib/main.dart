@@ -1,65 +1,93 @@
-//1. Tuliskan variabel Dart
-//saya akan menuliskan variabel dart dan cara mencetaknya
+import 'package:tugas_2_part2/materi_2.dart';
+import 'package:flutter/material.dart';
 
-void main(){
-  // membuat var 
-  // variabel teks = string
-  String nama = "Dian";
-  // variabel angka = int, double
-  int umur = 23;
-  double tinggi = 180.43;
-  //variabel boolean = bool
-  bool isMenikah = false;
-  // membuat veriabel dgn kata kunci var
-  var alamat = "Lombok, Indonesia";
-
-  //mengubah var string
-  nama = "Raditya";
-
-  // mencetak variabel
-  print("Nama saya $nama. Umur $umur tahun. Tinggi sekitar $tinggi cm.");
-  print("Menikah: $isMenikah");
-  print("Alamat: $alamat");
-
-//2. Buat loop seperti gambar di kanan
-	for(int i=0;i<=10;i++){
-		print("*" * i);
-	}
-
-//3. Tulis code list, map dan set
-
-//A. code List memakai Literal
-	var listLiteral = [1,2,3,4,5];
-	print(listLiteral);
-
-//B. Map memakai Literal
-	var ibuKota = {
-		'United States America' : 'Washington, D.C.',
-		'Canada' : 'Ottawa',
-		'Japan' : 'Tokyo',
-		'Korea' : 'Seoul',
-	};
-
-	print(ibuKota);
-
-//C. Set memakai Literal
-void main(List<String> arguments) {
-	var setLiteral = {1,2,3};
-	print(setLiteral);
+void main() {
+  runApp(const MyApp());
 }
 
-//4. Buatlah kondisi dengan if-else 
-//Jika ipk >=3,5 dan tidak pernah ada matkul yang mengulang hasilnya "cumlaude" jika <= 3,5 hasilnya "tidak cumlaude"
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-	var cumlaude = 3.5;
-	var radityaIpk = 3.7;
-	bool radityaMatkulMengulang = false;
-  
-	if(radityaIpk > cumlaude){
-		if (radityaMatkulMengulang) {
-			print('cumlaude');
-		}
-	} else{
-		print('tidak cumlaude');
-	}
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: "test"),
+    );
+  }
 }
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  var textSize = 12.0;
+  double _counter = 12.0;
+  bool isVisible = false;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(""),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+			  child: Text('enlarge text'),
+				onPressed: () {
+					textSize = textSize + 1.0;
+					print(textSize);
+					setState(() {});
+				  },
+			),
+    );
+  }
+}
+
+// class MyHomePage extends StatelessWidget {
+//   final String title;
+//   const MyHomePage({super.key, required this.title});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: SafeArea(
+//         child: Column(
+//           children: const [
+//             Center(
+//               child: Text(
+//                 "test",
+//                 style: TextStyle(
+//                   fontSize: 34,
+//                   fontWeight: FontWeight.w700,
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
