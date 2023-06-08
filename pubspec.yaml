@@ -1,4 +1,4 @@
-name: uts
+name: tugaspraktikum6
 description: A new Flutter project.
 
 publish_to: 'none' # private pack=unpublish pub.dev 
@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2 #icons font
+  shared_preferences: ^2.0.15 #shared_preferences
 
 dev_dependencies:
   flutter_test:
