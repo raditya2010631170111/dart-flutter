@@ -1,4 +1,4 @@
-name: tugaspraktikum6
+name: uts
 description: A new Flutter project.
 
 publish_to: 'none' # private pack=unpublish pub.dev 
@@ -12,29 +12,31 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2 #icons font
-  shared_preferences: ^2.0.15 #shared_preferences
+  cupertino_icons: ^1.0.3 #icons font
+  shared_preferences: ^2.0.15 
+  sqflite: ^2.0.0+3
+  path: ^1.8.0
+  provider: ^6.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
 
 flutter:
   uses-material-design: true #material icons font -use in material Icons class
   
-  assets: #Image widget JPG, JPEG, PNG, GIF, WEBP
-    - assets/
+  #assets: #JPG, JPEG, PNG, GIF, WEBP
 
-  fonts:
-  - family: Schyler
-    fonts:
-    - asset: fonts/Schyler-Regular.ttf
-    - asset: fonts/Schyler-Italic.ttf
-      style: italic
-  - family: Trajan Pro
-    fonts:
-    - asset: fonts/TrajanPro.ttf
-    - asset: fonts/TrajanPro_Bold.ttf
-      weight: 700
+  # fonts:
+  # - family: Schyler
+  #   fonts:
+  #   - asset: fonts/Schyler-Regular.ttf
+  #   - asset: fonts/Schyler-Italic.ttf
+  #     style: italic
+  # - family: Trajan Pro
+  #   fonts:
+  #   - asset: fonts/TrajanPro.ttf
+  #   - asset: fonts/TrajanPro_Bold.ttf
+  #     weight: 700
